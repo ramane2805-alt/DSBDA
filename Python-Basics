@@ -1,0 +1,75 @@
+Python 3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a=[]
+>>> a.extend([2,5,7,8,9)
+  File "<python-input-1>", line 1
+    a.extend([2,5,7,8,9)
+                       ^
+SyntaxError: closing parenthesis ')' does not match opening parenthesis '['
+>>> a.extend([2,5,7,8,9])
+>>> print(a)
+[2, 5, 7, 8, 9]
+>>>
+>>> b={}
+>>> type(b)
+<class 'dict'>
+>>>
+>>> X= { pid:101, pname : 'Book'}
+Traceback (most recent call last):
+  File "<python-input-8>", line 1, in <module>
+    X= { pid:101, pname : 'Book'}
+         ^^^
+NameError: name 'pid' is not defined. Did you mean: 'id'?
+>>> X= { pid : 101, pname : 'Book'}
+Traceback (most recent call last):
+  File "<python-input-9>", line 1, in <module>
+    X= { pid : 101, pname : 'Book'}
+         ^^^
+NameError: name 'pid' is not defined. Did you mean: 'id'?
+>>> X= {' pid' : 101,' pname' : 'Book'}
+>>> X[price]= 20
+Traceback (most recent call last):
+  File "<python-input-11>", line 1, in <module>
+    X[price]= 20
+      ^^^^^
+NameError: name 'price' is not defined. Did you mean: 'print'?
+>>> X['price']= 20
+>>> print(X)
+{' pid': 101, ' pname': 'Book', 'price': 20}
+>>>
+>>>
+>>> y= [[2,3,10,20][25,15,42,8]]
+<python-input-16>:1: SyntaxWarning: list indices must be integers or slices, not tuple; perhaps you missed a comma?
+Traceback (most recent call last):
+  File "<python-input-16>", line 1, in <module>
+    y= [[2,3,10,20][25,15,42,8]]
+        ~~~~~^^^^^^^^^^^^
+TypeError: list indices must be integers or slices, not tuple
+>>> y= [[2,3,10,20],[25,15,42,8]]
+>>> print(y[1][1])
+15
+>>>
+>>>
+>>> z=(23,24,25)
+>>> z.append(26)
+Traceback (most recent call last):
+  File "<python-input-22>", line 1, in <module>
+    z.append(26)
+    ^^^^^^^^
+AttributeError: 'tuple' object has no attribute 'append'
+>>> B= [a**a for a in range (1,6)]
+>>> print(B)
+[1, 4, 27, 256, 3125]
+>>> B= [a*a for a in range (1,6)]
+>>> print(B)
+[1, 4, 9, 16, 25]
+>>>
+>>>
+>>>
+>>>
+>>> name = input("Enter your name: ")
+Enter your name: Mrudula
+>>> roll_number = input("Enter your roll number: ")
+Enter your roll number: 13332
+>>> print(f"My name is {name} and my roll number is {roll_number}")
+My name is Mrudula  and my roll number is 13332
